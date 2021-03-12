@@ -60,7 +60,7 @@ Your database should contain the following four models, including the requiremen
 
 * `Category`
 
-  * `id`
+  * `id`✅
 
     * Integer.
   
@@ -70,7 +70,7 @@ Your database should contain the following four models, including the requiremen
   
     * Uses auto increment.
 
-  * `category_name`
+  * `category_name`✅
   
     * String.
   
@@ -78,7 +78,7 @@ Your database should contain the following four models, including the requiremen
 
 * `Product`
 
-  * `id`
+  * `id`✅
   
     * Integer.
   
@@ -88,7 +88,7 @@ Your database should contain the following four models, including the requiremen
   
     * Uses auto increment.
 
-  * `product_name`
+  * `product_name`✅
   
     * String.
   
@@ -102,7 +102,7 @@ Your database should contain the following four models, including the requiremen
   
     * Validates that the value is a decimal.
 
-  * `stock`
+  * `stock`✅
   
     * Integer.
   
@@ -110,7 +110,7 @@ Your database should contain the following four models, including the requiremen
   
     * Set a default value of `10`.
   
-    * Validates that the value is numeric.
+    * Validates that the value is numeric. ✅
 
   * `category_id`
   
@@ -120,7 +120,7 @@ Your database should contain the following four models, including the requiremen
 
 * `Tag`
 
-  * `id`
+  * `id`✅
   
     * Integer.
   
@@ -130,13 +130,13 @@ Your database should contain the following four models, including the requiremen
   
     * Uses auto increment.
 
-  * `tag_name`
+  * `tag_name`✅
   
     * String.
 
 * `ProductTag`
 
-  * `id`
+  * `id`✅
 
     * Integer.
 
@@ -146,13 +146,13 @@ Your database should contain the following four models, including the requiremen
 
     * Uses auto increment.
 
-  * `product_id`
+  * `product_id`✅
 
     * Integer.
 
     * References the `Product` model's `id`.
 
-  * `tag_id`
+  * `tag_id`✅
 
     * Integer.
 
