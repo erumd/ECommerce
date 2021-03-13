@@ -20,7 +20,6 @@ ProductTag.init(
         key: 'id',
         unique: false
       }
-
     },
     tag_id: {
       type: DataTypes.INTEGER,
