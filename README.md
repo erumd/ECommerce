@@ -22,7 +22,9 @@ Built the back end for an e-commerce site. Configured a working Express.js API t
 
 https://github.com/erumd/ECommerce
 
-![Screenshot](./image.jpg)
+Video Walk Through: https://video.drift.com/v/abCSlAA3kdq/
+
+![Screenshot](./Ecommerce.jpg)
 
 ## Questions
 
