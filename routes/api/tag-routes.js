@@ -14,20 +14,19 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  // find a single tag by its `id`
+  // find a single tag by its `id` "findByPk" OR "findOne"
   // be sure to include its associated Product data
-  Product.findByPk(req.params.id, {
-    include: [{ model: Product }],
-  })
+  Tag.findByPk(req.params.id)
+    // include: [{ model: Product }],
+
     .then((tags) => res.json(tags))
     .catch((err) => res.status(500).json(err));
 });
 
 router.post("/", (req, res) => {
   // create a new tag
-  Tag.create
-    .then(req.body)
-    .then((tag) => res.json(tag))
+  Tag.create(req.body)
+    .then((tags) => res.json(tags))
     .catch((err) => res.status(500).json(err));
 });
 

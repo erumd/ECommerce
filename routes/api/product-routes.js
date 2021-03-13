@@ -8,11 +8,11 @@ router.get("/", (req, res) => {
   // find all products
   // be sure to include its associated Category and Tag data
   //Capital letter is model
-  //models are green 
+  //models are green
   Product.findAll({
     include: [Category, Tag],
   })
-    .then((products) => res.json())
+    .then((products) => res.json(products))
 
     .catch((err) => res.status(500).json(err));
 });
@@ -21,6 +21,10 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
+  Product.findByPk(req.params.id)
+
+  .then((products) => res.json(products))
+    .catch((err) => res.status(500).json(err));
 });
 
 // create new product
@@ -33,7 +37,7 @@ router.post("/", (req, res) => {
       tagIds: [1, 2, 3, 4]
     }
   */
-//  post route
+  //  post route
   Product.create(req.body)
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
@@ -102,13 +106,11 @@ router.delete("/:id", (req, res) => {
   // delete one product by its `id` value
   Product.destroy({
     where: {
-      id: req.params.id
-    }
-})
-.then((deleteProduct) => res.json(deleteProduct))
-  .catch((err) => res.status(500).json(err));
+      id: req.params.id,
+    },
+  })
+    .then((deleteProduct) => res.json(deleteProduct))
+    .catch((err) => res.status(500).json(err));
 });
-
-
 
 module.exports = router;
