@@ -15,16 +15,16 @@ Built the back end for an e-commerce site. Configured a working Express.js API t
 ## Installation/Usage
 
 1. After cloning repo to your device in terminal run "npm install"
-2. Open up SQL Workbench and run the db files schema.sql and seed.sql.
+2. Open up SQL Workbench and run the db files schema.sql.
 3. In .env file set up your connection (database, username, password).
 4. Open terminal and locate the folder
-5. In terminal command line run "npm start" to start application
+5. In terminal command line run "npm run seed" & "npm start"
 
 https://github.com/erumd/ECommerce
 
 Video Walk Through: https://video.drift.com/v/abCSlAA3kdq/
 
-![Screenshot](./Ecommerce.jpg)
+![Screenshot](./images/ECommerce.jpg)
 
 ## Questions
 
